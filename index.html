@@ -314,6 +314,31 @@
                 grid-column: auto;
             }
         }
+    /* Isso cria a animação chamada 'pulsoRoxo' */
+@keyframes pulsoRoxo {
+    0% {
+        /* Estado inicial: borda normal e sem sombra */
+        border-color: rgba(138, 43, 226, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    50% {
+        /* Estado meio: borda acesa e sombra brilhante */
+        border-color: #a020f0; /* Um roxo mais claro */
+        box-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; /* Brilho neon */
+    }
+    100% {
+        /* Estado final: volta ao normal */
+        border-color: rgba(138, 43, 226, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+}
+
+/* Isso aplica a animação a qualquer coisa com a classe 'piscando' */
+.piscando {
+    /* Nome da animação, duração (1.5 segundos), modo (infinito) */
+    animation: pulsoRoxo 1.5s infinite;
+}
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -389,7 +414,7 @@
     <!-- GALERIA DE FOTOS - 7 PLATAFORMAS -->
     <div class="gallery">
         <!-- PRIVACY -->
-        <div class="photo-card">
+        <div class="photo-card piscando">
             <div class="photo-container">
                 <a href="https://privacy.com.br/profile/Vicmaranho" target="_blank" class="photo-link">
                     <img src="https://i.imgur.com/IrHL4Eo.jpeg" alt="IkyVic Privacy"
@@ -494,4 +519,4 @@
                 <div class="platform-name">Venha ver minha melhor amiga</div>
             </div>
         </div>
-                </div>
+    </div>
